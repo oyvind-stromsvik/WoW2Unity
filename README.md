@@ -1,9 +1,9 @@
 # WoW2Unity
 This is just for reference. Consider it outdated, deprecated, unsupported and so on.
 
-For the time being this is just me trying to get this wow.export (https://github.com/Kruithne/wow.export) to Unity importer made by Ryan Zehm to work, ref. https://www.youtube.com/watch?v=1Xo3Bo04wCI
+For the time being this is just me trying to get this WoW to Unity exporter/importer that Ryan Zehm made to actually work. He's compiled a custom version of a, now very old, version of wow.export (https://github.com/Kruithne/wow.export), and he's made a custom Unity importer to accompany that. There's more information in his Youtube video here: https://www.youtube.com/watch?v=1Xo3Bo04wCI
 
-It requires a specific, modified version of wow.export that is available in the description of the above video. Ryan Zehm's version of wow.export is modified to output splat maps suitable for Unity terrain, and there may be other modifications I'm not aware of, but that seems to be the main one at least. And that seems to be the prerequisite for this entire importer to work.
+The modified version of wow.export he made is available in the description of the above video. Ryan's version of wow.export is modified to output splat maps suitable for Unity terrain, and there may be other modifications I'm not aware of, but that seems to be the main one at least. And that seems to be the prerequisite for this entire importer to work.
 
 # How to use
 
