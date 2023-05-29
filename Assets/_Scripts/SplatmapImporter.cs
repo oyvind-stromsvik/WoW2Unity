@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEditor;
 using Newtonsoft.Json;
@@ -243,7 +244,7 @@ public class SplatmapImporter : MonoBehaviour
             for (int j = 0; j < deserialized.GetLength(1); j++) {
                 string sValue = deserialized[i, j];
                 if (sValue == null) { sValue = "0"; }
-                float value = float.Parse(sValue);
+                float value = float.Parse(sValue, CultureInfo.InvariantCulture.NumberFormat);
                 if (value > max) { max = value; }
                 if (value < min) { min = value; }
                 jsonHeights[i, j] = value;
@@ -278,7 +279,7 @@ public class SplatmapImporter : MonoBehaviour
                 if (sValue == null) {
                     sValue = "0";
                 }
-                float value = float.Parse(sValue);
+                float value = float.Parse(sValue, CultureInfo.InvariantCulture.NumberFormat);
                 if (value > max) { max = value; }
                 if (value < min) { min = value; }
                 jsonHeights[i, j] = value;

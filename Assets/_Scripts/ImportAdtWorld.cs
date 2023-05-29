@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 #if UNITY_EDITOR 
 using UnityEditor;
@@ -108,25 +109,25 @@ public class ImportAdtWorld : MonoBehaviour
 
             // Populate local vars from CSV file
             if (adtCsv == true) {
-                posX = float.Parse(lineData[1]); // x pos
-                posY = float.Parse(lineData[2]); // y pos
-                posZ = float.Parse(lineData[3]); // z pos
-                rotX = float.Parse(lineData[4]); // x rot
-                rotY = float.Parse(lineData[5]); // y rot                
-                rotZ = float.Parse(lineData[6]); // z rot
-                scale = float.Parse(lineData[7]); // scale
-                modelID = int.Parse(lineData[8]); // Model ID
+                posX = float.Parse(lineData[1], CultureInfo.InvariantCulture.NumberFormat); // x pos
+                posY = float.Parse(lineData[2], CultureInfo.InvariantCulture.NumberFormat); // y pos
+                posZ = float.Parse(lineData[3], CultureInfo.InvariantCulture.NumberFormat); // z pos
+                rotX = float.Parse(lineData[4], CultureInfo.InvariantCulture.NumberFormat); // x rot
+                rotY = float.Parse(lineData[5], CultureInfo.InvariantCulture.NumberFormat); // y rot                
+                rotZ = float.Parse(lineData[6], CultureInfo.InvariantCulture.NumberFormat); // z rot
+                scale = float.Parse(lineData[7], CultureInfo.InvariantCulture.NumberFormat); // scale
+                modelID = int.Parse(lineData[8], CultureInfo.InvariantCulture.NumberFormat); // Model ID
                 type = lineData[9]; // Type of file
             }
             else if (wmoCsv == true) {
-                posX = float.Parse(lineData[1]); // x pos
-                posY = float.Parse(lineData[2]); // y pos
-                posZ = float.Parse(lineData[3]); // z pos
-                rotW = float.Parse(lineData[4]); // w rot
-                rotX = float.Parse(lineData[5]); // x rot
-                rotY = float.Parse(lineData[6]); // y rot
-                rotZ = float.Parse(lineData[7]); // z rot
-                scale = float.Parse(lineData[8]); // scale
+                posX = float.Parse(lineData[1], CultureInfo.InvariantCulture.NumberFormat); // x pos
+                posY = float.Parse(lineData[2], CultureInfo.InvariantCulture.NumberFormat); // y pos
+                posZ = float.Parse(lineData[3], CultureInfo.InvariantCulture.NumberFormat); // z pos
+                rotW = float.Parse(lineData[4], CultureInfo.InvariantCulture.NumberFormat); // w rot
+                rotX = float.Parse(lineData[5], CultureInfo.InvariantCulture.NumberFormat); // x rot
+                rotY = float.Parse(lineData[6], CultureInfo.InvariantCulture.NumberFormat); // y rot
+                rotZ = float.Parse(lineData[7], CultureInfo.InvariantCulture.NumberFormat); // z rot
+                scale = float.Parse(lineData[8], CultureInfo.InvariantCulture.NumberFormat); // scale
                 type = lineData[9]; // Type of file
             }
             wowModel.modelID = modelID;
